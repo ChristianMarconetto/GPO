@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ComplianceHub - La soluzione per la conformità normativa</title>
+    <style>
+      /* Reset CSS */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Typography */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        color: #eee; /* Testo chiaro */
+        background-color: #121212; /* Sfondo scuro */
+        padding: 0;
+        margin: 0;
+      }
+
+      /* Header */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 86, 179, 0.9); /* Colore header */
+        color: #fff; /* Testo bianco */
+        padding: 20px 0;
+        text-align: center;
+        z-index: 1000;
+      }
+
+      header h1 {
+        font-size: 3rem; /* Dimensione titolo */
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Ombra testo */
+      }
+
+      nav ul {
+        list-style-type: none;
+      }
+
+      nav li {
+        display: inline-block;
+        margin-right: 20px;
+      }
+
+      nav a {
+        color: #fff; /* Testo bianco */
+        text-decoration: none;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #ffd700; /* Colore oro */
+      }
+
+      /* Main Content */
+      main {
+        padding-top: 80px; /* Altezza header */
+      }
+
+      section {
+        height: 100vh; /* Altezza sezione pari all'altezza dello schermo */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        transition: opacity 0.5s ease;
+        position: relative;
+      }
+      section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      section:nth-child(even) {
+        background-color: #212121; /* Sfondo sezione pari */
+        color: #fff; /* Testo bianco */
+      }
+
+      section:nth-child(odd) {
+        background-color: #333; /* Sfondo sezione dispari */
+        color: #eee; /* Testo chiaro */
+      }
+
+      section.hidden {
+        opacity: 0;
+      }
+
+      section.visible {
+        opacity: 1;
+      }
+
+      section h2 {
+        color: #90caf9; /* Colore blu chiaro */
+        margin-bottom: 15px;
+        font-size: 2rem; /* Dimensione titolo sezione */
+      }
+
+      section p {
+        color: #ccc; /* Testo grigio */
+        margin-bottom: 15px;
+      }
+
+      /* Button */
+      .btn {
+        background-color: #ffd700; /* Colore oro */
+        color: #333; /* Testo scuro */
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        border: none;
+        cursor: pointer;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      .btn:hover {
+        background-color: #ffa500; /* Colore arancione */
+        color: #fff; /* Testo bianco */
+      }
+
+      /* Footer */
+      footer {
+        background-color: rgba(0, 86, 179, 0.9); /* Colore footer */
+        color: #fff; /* Testo bianco */
+        text-align: center;
+        padding: 20px 0;
+      }
+
+      footer a {
+        color: #ffd700; /* Colore oro */
+        text-decoration: none;
+        margin: 0 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+      }
+
+      footer a:hover {
+        color: #fff; /* Testo bianco */
+      }
+
+      /* Aggiunta per le immagini di sfondo */
+      #intro {
+        background-image: url("./images/im1.png"); /* Immagine di sfondo */
+        background-size: cover;
+        background-position: center;
+      }
+
+      #about {
+        background-image: url("./images/im2.png"); /* Immagine di sfondo */
+        background-size: cover;
+        background-position: center;
+      }
+
+      #features {
+        background-image: url("./images/im3.png"); /* Immagine di sfondo */
+        background-size: cover;
+        background-position: center;
+      }
+
+      /* Altri stili di sezione possono essere aggiunti qui */
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>ComplianceHub</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">Chi siamo</a></li>
+          <li><a href="#features">Cosa facciamo</a></li>
+          <li><a href="#testimonials">Testimonianze</a></li>
+          <li><a href="#partners">Partner</a></li>
+          <li><a href="#contact">Contattaci</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="intro" class="visible">
+        <h2>La soluzione per la conformità normativa</h2>
+        <p>
+          ComplianceHub è la tua risposta alla gestione della conformità
+          normativa. Offriamo soluzioni su misura per aziende di qualsiasi
+          dimensione, aiutandoti a ridurre il rischio legale e a ottimizzare le
+          tue operazioni.
+        </p>
+        <p>
+          Scopri come possiamo aiutare la tua azienda a raggiungere nuovi
+          livelli di sicurezza e competitività.
+        </p>
+        <a href="#about" class="btn">Inizia ora</a>
+      </section>
+      <section id="about" class="hidden">
+        <h2>Chi siamo</h2>
+        <p>
+          ComplianceHub è un team di esperti dedicati alla semplificazione della
+          conformità normativa. Con anni di esperienza nel settore, siamo qui
+          per fornire le migliori soluzioni per la tua azienda.
+        </p>
+        <p>
+          Siamo impegnati a garantire che tu possa concentrarti sulle tue
+          attività principali, sapendo che la tua conformità è nelle mani
+          giuste.
+        </p>
+      </section>
+      <section id="features" class="hidden">
+        <h2>Cosa facciamo</h2>
+        <div class="feature">
+          <h3>Analisi della conformità</h3>
+          <p>
+            Effettuiamo un'analisi dettagliata delle esigenze di conformità
+            della tua azienda e forniamo soluzioni personalizzate.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Formazione del personale</h3>
+          <p>
+            Offriamo moduli di formazione online per educare il personale sui
+            regolamenti specifici del settore.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Aggiornamenti in tempo reale</h3>
+          <p>
+            Monitoriamo costantemente le normative e forniamo aggiornamenti in
+            tempo reale per garantire la conformità continua.
+          </p>
+        </div>
+        <div class="feature">
+          <h3>Assistenza dedicata</h3>
+          <p>
+            Il nostro team di esperti è sempre disponibile per fornire
+            assistenza personalizzata e risolvere qualsiasi problema relativo
+            alla conformità normativa.
+          </p>
+        </div>
+      </section>
+      <!-- Altre sezioni possono essere aggiunte qui -->
+      <section id="testimonials" class="hidden">
+        <h2>Testimonianze</h2>
+        <p>Le opinioni dei nostri clienti soddisfatti.</p>
+        <div class="testimonial">
+          <p>
+            "ComplianceHub mi ha aiutato a semplificare il processo di
+            conformità normativa nella mia azienda. Consigliato!"
+          </p>
+          <p>- Marco Rossi, CEO di Rossi Srl</p>
+        </div>
+        <div class="testimonial">
+          <p>
+            "Grazie a ComplianceHub, la mia azienda ha ottenuto una gestione più
+            efficiente della conformità, risparmiando tempo prezioso."
+          </p>
+          <p>- Maria Bianchi, Responsabile Compliance di Bianchi & Co.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="hidden">
+        <h2>Contattaci</h2>
+        <p>
+          Hai domande o desideri maggiori informazioni? Contattaci e saremo
+          lieti di aiutarti.
+        </p>
+        <a href="#" class="btn">Contattaci</a>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 ComplianceHub. Tutti i diritti riservati.</p>
+      <nav>
+        <ul>
+          <li><a href="#">Termini e condizioni</a></li>
+          <li><a href="#">Privacy policy</a></li>
+          <li><a href="#">Cookie policy</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+    <script>
+      window.addEventListener("scroll", () => {
+        const sections = document.querySelectorAll("section");
+        sections.forEach((section) => {
+          const sectionTop = section.getBoundingClientRect().top;
+          const sectionBottom = section.getBoundingClientRect().bottom;
+          const windowHeight = window.innerHeight;
+          if (
+            sectionTop < windowHeight * 0.75 &&
+            sectionBottom > windowHeight * 0.25
+          ) {
+            section.classList.add("visible");
+            section.classList.remove("hidden");
+          } else {
+            section.classList.add("hidden");
+            section.classList.remove("visible");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
